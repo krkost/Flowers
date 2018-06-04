@@ -17,11 +17,11 @@ public class MainApp {
 		
 		//(type, color, stemLength, freshnessLevel, childProperty, price)
 		FlowerInPot flowerInPot = new FlowerInPot("Rose", "blue", 3.4, 5, "Round", 10);
-		GardenFlower gardenFlower = new GardenFlower("Chamomile", "red", 2, 6,"Botanical Garden", 10);
-		PlasticFlower plasticFlower = new PlasticFlower("Lily", "orange", 2, 6,"Polymer", 10);
+		GardenFlower gardenFlower = new GardenFlower("Chamomile", "red", 2, 6,"Botanical Garden", 20);
+		PlasticFlower plasticFlower = new PlasticFlower("Lily", "orange", 2, 10,"Polymer", 15);
 		
 		//(name, price)
-		Accessories accessories1 = new Accessories("Ribbon", 4);
+		Accessories accessories1 = new Accessories("Ribbon", 10);
 		Accessories accessories2 = new Accessories("Package", 5);
 		
 		Bouqet bouqet = new Bouqet();
@@ -36,7 +36,9 @@ public class MainApp {
 		bouqet.accessories[0] = accessories1;
 		bouqet.accessories[1] = accessories2;
 		
-		System.out.println(bouqet.getBouqetPrice());
+		bouqet.printBouqet();
+		bouqet.printBouqetPrice();
+		bouqet.sortBouqetByFreshness();
 		
 	}
 

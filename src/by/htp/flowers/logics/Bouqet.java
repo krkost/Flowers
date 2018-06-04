@@ -6,7 +6,7 @@ import by.htp.flowers.entity.Accessories;
 public class Bouqet {
 	public Flower[] flowers;
 	public Accessories[] accessories;
-	double bouqetPrice;
+	protected double bouqetPrice;
 
 	public Bouqet() {
 
@@ -19,6 +19,8 @@ public class Bouqet {
 		for (int i = 0; i < accessories.length; i++) {
 			this.accessories[i] = accessories[i];
 		}
+
+		this.bouqetPrice = this.getBouqetPrice();
 	}
 
 	public double getBouqetPrice() {
@@ -31,10 +33,37 @@ public class Bouqet {
 		}
 		return sumPrice;
 	}
-	
+
+	public void printBouqetPrice() {
+		System.out.println("\nThe final bouqet price: " + this.getBouqetPrice());
+	}
+
 	public void printBouqet() {
+		System.out.println("Flowers in the bouqet:");
 		for (int i = 0; i < this.flowers.length; i++) {
-			//here will be print method
+			flowers[i].printFlower();
+		}
+		System.out.println("\nAccessories in the bouqet:");
+		for (int i = 0; i < this.accessories.length; i++) {
+			accessories[i].printAccessories();
+		}
+	}
+
+	public void sortBouqetByFreshness () {
+		
+		Flower[] tmpFlowers = this.flowers;
+		for (int i = 0; i < this.flowers.length; i++) {
+			for (int j = 0; j < this.flowers.length - 1; j++) {
+				if (tmpFlowers[j].getFreshnessLevel() < tmpFlowers[j+1].getFreshnessLevel()) {
+					Flower tmpFlower = tmpFlowers[j];
+					tmpFlowers[j] = tmpFlowers[j+1];
+					tmpFlowers[j+1] = tmpFlower;
+				}
+			}
+		}
+		System.out.println("\nFlowers in the bouqet after sorting by freshness level:");
+		for (int i = 0; i < tmpFlowers.length; i++) {
+			tmpFlowers[i].printFlower();
 		}
 	}
 

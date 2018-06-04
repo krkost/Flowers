@@ -28,5 +28,8 @@ public class Accessories {
 	public void setPrice(double price) {
 		this.price = price;
 	}
-
+	 
+	public void printAccessories() {
+		System.out.println("Accessory name: " + this.name + " Price:" + this.price);
+	}
 }

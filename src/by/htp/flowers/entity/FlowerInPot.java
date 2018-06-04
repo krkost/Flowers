@@ -21,5 +21,11 @@ public class FlowerInPot extends Flower {
 	public void setPotForm(String potForm) {
 		this.potForm = potForm;
 	}
+	
+	public void printFlower() {
+		System.out.println("Flower name: " + this.nameFlower + " Color: " + this.color + " Length of stem: "
+				+ this.stemLength + " Level of freshness: " + this.freshnessLevel + " Form of pot:"
+				+ this.potForm + " Price: " + this.price);
+	}
 
 }

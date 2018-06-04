@@ -22,5 +22,11 @@ public class GardenFlower extends Flower{
 		this.gardenName = gardenName;
 	}
 	
+	public void printFlower() {
+		System.out.println("Flower name: " + this.nameFlower + " Color: " + this.color + " Length of stem: "
+				+ this.stemLength + " Level of freshness: " + this.freshnessLevel + " Garden Name:"
+				+ this.gardenName + " Price: " + this.price);
+	}
+	
 
 }
