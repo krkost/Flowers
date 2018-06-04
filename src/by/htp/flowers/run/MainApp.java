@@ -16,9 +16,9 @@ public class MainApp {
 	public static void main(String[] args) {
 		
 		//(type, color, stemLength, freshnessLevel, childProperty, price)
-		FlowerInPot flowerInPot = new FlowerInPot("Rose", "blue", 3.4, 5, "Round", 5);
-		GardenFlower gardenFlower = new GardenFlower("Chamomile", "red", 2, 6,"Botanical Garden", 8);
-		PlasticFlower plasticFlower = new PlasticFlower("Lily", "orange", 2, 6,"Polymer", 8);
+		FlowerInPot flowerInPot = new FlowerInPot("Rose", "blue", 3.4, 5, "Round", 10);
+		GardenFlower gardenFlower = new GardenFlower("Chamomile", "red", 2, 6,"Botanical Garden", 10);
+		PlasticFlower plasticFlower = new PlasticFlower("Lily", "orange", 2, 6,"Polymer", 10);
 		
 		//(name, price)
 		Accessories accessories1 = new Accessories("Ribbon", 4);
@@ -32,6 +32,9 @@ public class MainApp {
 		bouqet.flowers[2] = plasticFlower;
 		
 		bouqet.accessories = new Accessories[2];
+		
+		bouqet.accessories[0] = accessories1;
+		bouqet.accessories[1] = accessories2;
 		
 		System.out.println(bouqet.getBouqetPrice());
 		

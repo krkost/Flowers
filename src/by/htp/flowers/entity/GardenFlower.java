@@ -3,8 +3,7 @@ package by.htp.flowers.entity;
 public class GardenFlower extends Flower{
 	
 	private String gardenName;
-	private double price;
-	
+
 	public GardenFlower() {
 		
 	}

@@ -3,7 +3,6 @@ package by.htp.flowers.entity;
 public class PlasticFlower extends Flower{
 	
 	private String plasticType;
-	private double price;
 	
 	public PlasticFlower() {
 	}
