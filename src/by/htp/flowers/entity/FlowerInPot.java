@@ -2,7 +2,7 @@ package by.htp.flowers.entity;
 
 public class FlowerInPot extends Flower {
 	
-	String potForm;
+	private String potForm;
 	
 	public FlowerInPot() {
 		
