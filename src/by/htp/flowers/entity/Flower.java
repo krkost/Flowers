@@ -27,6 +27,14 @@ public class Flower {
 		this.freshnessLevel = freshnessLevel;
 	}
 	
+	public double getStemLength() {
+		return stemLength;
+	}
+	
+	public void setStemLength(double stemLength) {
+		this.stemLength = stemLength;
+	}
+	
 	public double getPrice() {
 		return price;
 	}
