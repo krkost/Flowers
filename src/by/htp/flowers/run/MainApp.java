@@ -17,24 +17,28 @@ public class MainApp {
 	public static void main(String[] args) {
 		
 		Bouquet bouquet = new Bouquet();
-		bouquet.flowers = new Flower[3];
-		bouquet.accessories = new Accessories[2];
 		
 		//(type, color, stemLength, freshnessLevel, childProperty, price)
 		FlowerInPot flowerInPot = new FlowerInPot("Rose", "blue", 3.4, 5, "Round", 10);
 		GardenFlower gardenFlower = new GardenFlower("Chamomile", "red", 6.4, 6,"Botanical Garden", 20);
 		PlasticFlower plasticFlower = new PlasticFlower("Lily", "orange", 2, 10,"Polymer", 15);
 		
+		Flower[] flowers = new Flower[3];
+		flowers[0] = flowerInPot;
+		flowers[1] = gardenFlower;
+		flowers[2] = plasticFlower;
+		
+		bouquet.addFlower(flowers);
+		
 		//(name, price)
 		Accessories accessories1 = new Accessories("Ribbon", 10);
 		Accessories accessories2 = new Accessories("Package", 5);
 		
-		bouquet.flowers[0] = flowerInPot;
-		bouquet.flowers[1] = gardenFlower;
-		bouquet.flowers[2] = plasticFlower;
-		
-		bouquet.accessories[0] = accessories1;
-		bouquet.accessories[1] = accessories2;
+		Accessories [] accessories = new Accessories[2];
+		accessories[0] = accessories1;
+		accessories[1] = accessories2;
+
+		bouquet.addAccessory(accessories);
 		
 		bouquet.printBouquet();
 		bouquet.printBouquetPrice();

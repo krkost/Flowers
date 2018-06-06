@@ -4,7 +4,7 @@ import by.htp.flowers.entity.Flower;
 import by.htp.flowers.entity.Accessories;
 
 public class Bouquet {
-	public Flower[] flowers;
+	private Flower[] flowers;
 	public Accessories[] accessories;
 	protected double bouquetPrice;
 
@@ -23,7 +23,7 @@ public class Bouquet {
 		this.bouquetPrice = this.getBouquetPrice();
 	}
 
-	public double getBouquetPrice() {
+	private double getBouquetPrice() {
 		double sumPrice = 0;
 		for (int i = 0; i < flowers.length; i++) {
 			sumPrice = sumPrice + flowers[i].getPrice();
@@ -32,6 +32,20 @@ public class Bouquet {
 			sumPrice = sumPrice + accessories[i].getPrice();
 		}
 		return sumPrice;
+	}
+	
+	public void addFlower(Flower[] flowers) {
+		this.flowers = new Flower[flowers.length];
+		for (int i = 0; i < flowers.length; i++) {
+			this.flowers[i] = flowers[i];
+		}
+	}
+	
+	public void addAccessory(Accessories[] accessories) {
+		this.accessories = new Accessories[accessories.length];
+		for (int i = 0; i < accessories.length; i++) {
+			this.accessories[i] = accessories[i];
+		}
 	}
 
 	public void printBouquetPrice() {
